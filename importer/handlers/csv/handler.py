@@ -122,9 +122,13 @@ class CSVFileHandler(BaseVectorFileHandler):
             )
 
         if not geom_is_in_schema and not has_lat and not has_long:
+            pass
+            """
+            Aqui ponemos pass para que no se ejecute el código que sigue, ya que no es necesario
             raise InvalidCSVException(
                 f"Not enough geometry field are set. The possibilities are: {','.join(fields)}"
             )
+            """
 
         return True
 
